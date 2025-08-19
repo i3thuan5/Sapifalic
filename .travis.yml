@@ -1,0 +1,51 @@
+---
+os: linux
+dist: jammy
+language: python
+python:
+  - '3.10'
+before_install:
+  - pip install --upgrade pip setuptools
+branches:
+  only:
+    - main
+jobs:
+  include:
+    - name: Check YAML format
+      install:
+        - pip install tox
+      script:
+        - tox -e yamllint
+    - name: Check Markdown Format
+      install:
+        - pip install tox
+      script:
+        - tox -e pymarkdown
+    - name: Check Gherkin format
+      language: node_js
+      node_js: 22
+      before_install: skip
+      install:
+        - npm install gherkin-lint
+      script:
+        - npx gherkin-lint
+    - name: Check Python Format
+      install:
+        - pip install tox
+      script:
+        - tox -e flake8
+    - name: Check Bash format
+      install:
+        - pip install tox
+      script:
+        - tox -e shellcheck
+    - name: Test
+      install:
+        - pip install tox
+      script:
+        - tox -e test
+    - name: Behave
+      install:
+        - pip install tox
+      script:
+        - tox -e behave

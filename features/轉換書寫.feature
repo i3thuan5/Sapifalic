@@ -24,6 +24,11 @@ Examples: 原本有e不影響
 		| 聖經書寫 | 原語會書寫 |
 		| tireng | tireng |
 
+Examples: 大寫嘛會補
+		| 聖經書寫 | 原語會書寫 |
+		| Dmak | Demak |
+		| Rmes | Remes |
+
 Examples: 句子
 		| 聖經書寫 | 原語會書寫 |
 		| Yo ci Hirotiho ko hongti i, | Yo ci Hirotiho ko hongti i, |

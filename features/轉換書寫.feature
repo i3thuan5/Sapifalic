@@ -13,6 +13,8 @@ Examples: 開頭連續子音就補e
 Examples: 詞中的連續子音不補e
 		| 聖經書寫 | 原語會書寫 |
 		| tamdaw | tamdaw |
+		| kahmekan | kahmekan |
+		| mahmek | mahmek |
 
 Examples: 去對辭典，補e
 		| 聖經書寫 | 原語會書寫 |

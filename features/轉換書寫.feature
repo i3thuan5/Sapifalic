@@ -1,6 +1,6 @@
 Feature: 聖經書寫系統要轉換成原語會書寫系統
 
-Scenario: 系統會補上聖經省略的e
+Scenario Outline: 系統會補上聖經省略的e
 
 		When 輸入 <聖經書寫>
 		Then 輸出 <原語會書寫>

@@ -35,6 +35,7 @@ Examples: 大寫嘛OK
 		| Rmes | Remes |
 		| Ngangan | Ngangan |
 		| Annay | Annay |
+		| Mihcaan | Mihecaan |
 
 Examples: 句子
 		| 聖經書寫 | 原語會書寫 |

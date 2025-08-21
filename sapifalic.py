@@ -1,7 +1,7 @@
 import re
 
 
-_sapicacawas = re.compile('(ng|ey|.)')
+_sapicacawas = re.compile('(ng|Ng|ey|Ey|.)',)
 vowel = ['a', 'e', 'i', 'o', 'ey']
 
 def bible2ilrdf(bible):
@@ -15,7 +15,7 @@ def bible2ilrdf_word(bible):
     kiatko = [im[0]]
     poo_e = True
     for tsing, au in zip(im, im[1:]):
-        if tsing in vowel or au in vowel:
+        if tsing.lower() in vowel or au.lower() in vowel:
             poo_e = False
         if poo_e:
             kiatko.append('e')

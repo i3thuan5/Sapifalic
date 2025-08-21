@@ -1,8 +1,11 @@
 import re
+from codad import read_amis_dict
 
 
 _sapicacawas = re.compile('(ng|Ng|ey|Ey|.)',)
 vowel = ['a', 'e', 'i', 'o', 'ey']
+amis_dict = read_amis_dict()
+
 
 def bible2ilrdf(bible):
     kiatko = []
@@ -11,6 +14,10 @@ def bible2ilrdf(bible):
     return ' '.join(kiatko)
 
 def bible2ilrdf_word(bible):
+    try:
+        return amis_dict[bible]
+    except KeyError:
+        pass
     im = _sapicacawas.findall(bible)
     kiatko = [im[0]]
     poo_e = True

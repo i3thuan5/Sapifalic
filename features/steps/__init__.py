@@ -9,4 +9,4 @@ def step_impl(context, bible):
 
 @then(u'輸出 {ilrdf}')
 def step_impl(context, ilrdf):
-    assert bible2ilrdf(context.bible) == ilrdf
+    assert bible2ilrdf(context.bible) == ilrdf, '結果是：' + bible2ilrdf(context.bible)

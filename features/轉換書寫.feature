@@ -15,19 +15,26 @@ Examples: 詞中的連續子音不補e
 		| tamdaw | tamdaw |
 		| kahmekan | kahmekan |
 		| mahmek | mahmek |
+		| annay | annay |
 
 Examples: 去對辭典，補e
 		| 聖經書寫 | 原語會書寫 |
 		| mihcaan | mihecaan |
 
+Examples: ng不影響
+		| 聖經書寫 | 原語會書寫 |
+		| ngangan | ngangan |
+
 Examples: 原本有e不影響
 		| 聖經書寫 | 原語會書寫 |
 		| tireng | tireng |
 
-Examples: 大寫嘛會補
+Examples: 大寫嘛OK
 		| 聖經書寫 | 原語會書寫 |
 		| Dmak | Demak |
 		| Rmes | Remes |
+		| Ngangan | Ngangan |
+		| Annay | Annay |
 
 Examples: 句子
 		| 聖經書寫 | 原語會書寫 |

@@ -3,10 +3,12 @@ from sapifalic import bible2ilrdf
 
 
 @when('輸入 {bible}')
-def step_impl(context, bible):
+def 輸入(context, bible):
     context.bible = bible
 
 
-@then(u'輸出 {ilrdf}')
-def step_impl(context, ilrdf):
-    assert bible2ilrdf(context.bible) == ilrdf, '結果是：' + bible2ilrdf(context.bible)
+@then('輸出 {ilrdf}')
+def 輸出(context, ilrdf):
+    assert bible2ilrdf(context.bible) == ilrdf, (
+        '結果是：' + bible2ilrdf(context.bible)
+    )

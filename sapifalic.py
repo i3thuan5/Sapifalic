@@ -13,6 +13,7 @@ def bible2ilrdf(bible):
         kiatko.append(bible2ilrdf_word(word))
     return ' '.join(kiatko)
 
+
 def bible2ilrdf_word(bible):
     try:
         return amis_dict[bible]

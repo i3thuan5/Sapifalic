@@ -1,0 +1,31 @@
+import re
+from codad import read_amis_dict
+
+
+_sapicacawas = re.compile('(ng|Ng|ey|Ey|.)',)
+vowel = ['a', 'e', 'i', 'o', 'ey']
+amis_dict = read_amis_dict()
+
+
+def bible2ilrdf(bible):
+    kiatko = []
+    for word in bible.split():
+        kiatko.append(bible2ilrdf_word(word))
+    return ' '.join(kiatko)
+
+
+def bible2ilrdf_word(bible):
+    try:
+        return amis_dict[bible]
+    except KeyError:
+        pass
+    im = _sapicacawas.findall(bible)
+    kiatko = [im[0]]
+    poo_e = True
+    for tsing, au in zip(im, im[1:]):
+        if tsing.lower() in vowel or au.lower() in vowel:
+            poo_e = False
+        if poo_e:
+            kiatko.append('e')
+        kiatko.append(au)
+    return ''.join(kiatko)
